@@ -1,4 +1,4 @@
-# Case-study #2: pillar
+# Case-study #2
 # Developers: Solovyova Maria
 #
 
