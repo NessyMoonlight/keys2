@@ -1,5 +1,5 @@
 # Case-study #2
-# Developers: Solovyova Maria
+# Developers: Egor Lyamin, Solovyova Maria, Artemiy Borodin, Polina
 #
 
 import local_ru as ru
