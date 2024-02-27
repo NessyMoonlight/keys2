@@ -1,8 +1,9 @@
 # Case-study #2
-# Developers: Egor Lyamin, Maria Solovyova, Artemiy Borodin, Polina
+# Developers: Egor Lyamin, Maria Solovyova,
+# Artemiy Borodin, Polina Selikhova
 #
 
-import local_ru as ru
+import ru_local as ru
 def main():
     '''
     Main function.
