@@ -1,5 +1,5 @@
 # Case-study #2: pillar
-# Developer:
+# Developers: Solovyova Maria
 #
 
 import local_ru as ru
