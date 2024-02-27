@@ -1,6 +1,7 @@
-# Case-study #2
-# Developers: Egor Lyamin, Maria Solovyova,
-# Artemiy Borodin, Polina Selikhova
+# Case-study #2:
+# Lake pillar
+# Developers: Polina Selikhova, Maria Solovyova,
+# Artemiy Borodin, Egor Lyamin.
 #
 
 import ru_local as ru
@@ -11,25 +12,24 @@ def main():
     '''
 
     import math
-    V_lake = int(input(ru.V_lake))
-    m = float(input(ru.m))
-    k = float(input(ru.k))
-    A = V_lake
-    t = float(input(ru.t))
-    long_moon = 384467000
 
-    if (long_moon % V_lake != 0):
-        lake_for_moon = long_moon // V_lake + 1
-    else:
-        lake_for_moon = long_moon // V_lake
+    #the user enters variables
+    mass = float(input(ru.MASS_CARGO))
+    koef = float(input(ru.STIFFNESS_COEFFICIENT))
+    amplitude = float(input(ru.AMPLITUDE))
+    time = float(input(ru.TIME))
 
+    #calculating the necessary values according
+    # to the formulas of physics
+    period = 2 * math.pi * (mass / koef)** 0.5
+    speed = abs((amplitude * (2 * math.pi / period) *
+             math.cos(2 * math.pi * time / period)))
+    max_boost = (-amplitude * (2 * math.pi / period)** 2
+                 * math.sin(2 * math.pi * time / period))
 
-    T = 2 * math.pi * (m / k)** 0.5
-    v = A * (2 * math.pi / T) * math.cos(2 * math.pi * t / T)
-    a = -A * (2 * math.pi / T)** 2 * math.sin(2 * math.pi * t / T)
-    print(long_moon// V_lake)
-    print(f"{ru.load_speed} {t} {ru.sec} {v} {ru.mc}")
-    print(f"{ru.load_acceleration} {t} {ru.sec} {a} {ru.mcc}")
+    #output of the received values
+    print(f"{ru.CARGO_SPEED} {time} {ru.SEC} {speed} {ru.MS}")
+    print(f"{ru.CARGO_ACCELERATION} {time} {ru.SEC} {max_boost} {ru.MSS}")
 
 
 if __name__ == '__main__':
