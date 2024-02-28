@@ -22,8 +22,8 @@ def main():
     #calculating the necessary values according
     # to the formulas of physics
     period = 2 * math.pi * (mass / koef)** 0.5
-    speed = abs((amplitude * (2 * math.pi / period)
-                 * math.cos(2 * math.pi * time / period)))
+    speed = (amplitude * (2 * math.pi / period)
+                 * math.cos(2 * math.pi * time / period))
     max_boost = (-amplitude * (2 * math.pi / period)** 2
                  * math.sin(2 * math.pi * time / period))
 
